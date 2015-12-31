@@ -12,7 +12,6 @@ namespace ProgParty.Core.Element.HtmlToRtf
             doc.OptionOutputAsXml = true;
             doc.LoadHtml(html);
             return doc.DocumentNode.Descendants("html").First().InnerHtml;
-
         }
     }
 }

@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Notifications;
-using Windows.UI.Xaml.Controls;
 
 namespace ProgParty.Core.Image
 {

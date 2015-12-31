@@ -14,7 +14,6 @@ namespace ProgParty.Core.Element.HtmlToRtf
 
         public void Add(Inline text)
         {
-            //throw new NotSupportedException();
             var paragraph = new Paragraph();
             paragraph.Inlines.Add(text);
             Add(paragraph);

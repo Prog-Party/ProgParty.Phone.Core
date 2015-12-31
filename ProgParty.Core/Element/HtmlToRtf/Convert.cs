@@ -14,12 +14,9 @@ namespace ProgParty.Core.Element.HtmlToRtf
         {
             var oldHtml = html;
             html = System.Net.WebUtility.HtmlDecode(html);
-            //html = html.Replace("&nbsp;", " ");
-            //html = html.Replace("&rsquo;", "'");
             html = html.Replace("&bull;", "<br />    - ");
             html = html.Replace("&middot;", "<br />    - ");
             html = html.Replace("<li>", "    - ").Replace("</li>", "<br />").Replace("<ul>","<p>").Replace("</ul>","</p>");
-            //html = html.Replace("&", "&amp;").Replace("\"", "&quot;").Replace("'", "&apos;");
             
             html = html.Replace("<br /><br /><p>", "<br /><p>");
 

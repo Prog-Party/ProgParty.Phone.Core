@@ -94,7 +94,6 @@
     <Content Include="Assets\icons\review.png" />
     <Content Include="Assets\sale.png" />
     <Content Include="License\WindowsStoreProxy.xml" />
-    <Content Include="obj\Debug\XamlSaveStateFile.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ads.cs" />
@@ -125,8 +124,6 @@
     <Compile Include="Track\Telemetry.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -142,10 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Base\" />
-    <Folder Include="bin\Debug\" />
-    <Folder Include="bin\Release\" />
-    <Folder Include="obj\Debug\intermediatexaml\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">

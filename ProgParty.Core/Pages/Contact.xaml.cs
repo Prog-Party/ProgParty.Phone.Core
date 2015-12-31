@@ -1,9 +1,8 @@
-﻿using ProgParty.Core.Review;
-using System;
-using Windows.UI.Popups;
+﻿using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -15,11 +14,35 @@ namespace ProgParty.Core.Pages
     /// </summary>
     public sealed partial class Contact : Page
     {
-        public Contact()
+        public Contact(SolidColorBrush foregroundColor, SolidColorBrush backgroundColor, bool imageMirrored = false)
         {
             this.InitializeComponent();
+
+            SetColors(foregroundColor, backgroundColor);
+            SetFooterImage(imageMirrored);
+            
             Track.Telemetry.Instance.PageVisit(this);
         }
+
+
+        private void SetColors(SolidColorBrush foregroundColor, SolidColorBrush backgroundColor)
+        {
+            this.Background = backgroundColor;
+            this.Foreground = foregroundColor;
+        }
+
+        private void SetFooterImage(bool imageMirrored)
+        {
+            BitmapImage footerImage = new BitmapImage();
+            
+            if (imageMirrored)
+                footerImage.UriSource = new Uri("ms-appx:///Core/Assets/foto_jens_dennis.png");
+            else
+                footerImage.UriSource = new Uri("ms-appx:///Core/Assets/foto_jens_dennis_mirror.png");
+
+            FooterImage.Source = footerImage;
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 #if WINDOWS_PHONE_APP
@@ -47,7 +70,7 @@ namespace ProgParty.Core.Pages
 
         private void FotoJensDennis_Loaded(object sender, RoutedEventArgs e)
         {
-            FotoJensDennis.Width = Window.Current.Bounds.Width;
+            FooterImage.Width = Window.Current.Bounds.Width;
         }
 
         private async void DennisMail_Click(object sender, RoutedEventArgs e)

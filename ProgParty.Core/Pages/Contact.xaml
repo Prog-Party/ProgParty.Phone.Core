@@ -5,9 +5,7 @@
     xmlns:local="using:ProgParty.Core.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="#f0f0f0"
-    Foreground="#000000">
+    mc:Ignorable="d">
 
     <!--LayoutRoot is the root grid where all page content is placed.-->
     <Grid x:Name="LayoutRoot" Margin="0">
@@ -65,7 +63,7 @@
                         </Border>
                     </HyperlinkButton>
                 </StackPanel>
-                <Image Source="/Core/Assets/foto_jens_dennis_mirror.png" Name="FotoJensDennis" Loaded="FotoJensDennis_Loaded" />
+                <Image Name="FooterImage" Loaded="FotoJensDennis_Loaded" />
             </StackPanel>
         </ScrollViewer>
     </Grid>

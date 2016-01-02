@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgParty.Core", "ProgParty.Core\ProgParty.Core.csproj", "{3D2DE4A2-5DC1-4668-AC9F-74B1A185D70D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{716501DA-D2FA-4ADA-8D84-A3D009D711A8}"
+	ProjectSection(SolutionItems) = preProject
+		build.bat = build.bat
+		ProgParty.Core.nuspec = ProgParty.Core.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -14,7 +14,9 @@ if "%nuget%" == "" (
 	set nuget=nuget
 )
 
-"C:\Program Files (x86)\MSBuild\14.0\Bin\MsBuild.exe" ProgParty.Core.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
+%NuGet% restore ProgParty.Core.sln
+%NuGet% restore "ProgParty.Core/packages.config"
+%MsBuildExe% ProgParty.Core.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
 
 mkdir Build
 mkdir Build\lib

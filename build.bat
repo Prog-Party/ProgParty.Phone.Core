@@ -15,11 +15,10 @@ if "%nuget%" == "" (
 )
 
 %NuGet% restore ProgParty.Core.sln
-%NuGet% restore "ProgParty.Core/packages.config"
 %MsBuildExe% ProgParty.Core.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
 
 mkdir Build
 mkdir Build\lib
 mkdir Build\lib\net40
 
-%nuget% pack "ProgParty.Core.nuspec" -NoPackageAnalysis -OutputDirectory -verbosity detailed -o Build -Version %version% -p Configuration="%config%"
+%nuget% pack "ProgParty.Core.nuspec" -NoPackageAnalysis -verbosity detailed -o Build -Version %version% -p Configuration="%config%"

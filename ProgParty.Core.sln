@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{716501DA-D2FA-4ADA-8D84-A3D009D711A8}"
 	ProjectSection(SolutionItems) = preProject
 		build.bat = build.bat
-		MyGet.NuGet.config = MyGet.NuGet.config
 		ProgParty.Core.nuspec = ProgParty.Core.nuspec
 	EndProjectSection
 EndProject

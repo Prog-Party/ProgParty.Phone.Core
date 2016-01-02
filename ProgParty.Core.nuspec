@@ -16,6 +16,6 @@
     <tags>library windows phone windowsphone core wp8 wp8.1</tags>
   </metadata>
   <files>
-	<file src="ProgParty.Core\bin\$configuration$\ARM\ProgParty.Core.dll" target="lib\net40\" />
+	<file src="ProgParty.Core\bin\$configuration$\ProgParty.Core.dll" target="lib\net40\" />
   </files>
 </package>

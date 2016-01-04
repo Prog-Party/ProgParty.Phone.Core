@@ -7,7 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgParty.Core", "ProgParty
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{716501DA-D2FA-4ADA-8D84-A3D009D711A8}"
 	ProjectSection(SolutionItems) = preProject
-		MyGet.bat = MyGet.bat
 		ProgParty.Core.nuspec = ProgParty.Core.nuspec
 	EndProjectSection
 EndProject

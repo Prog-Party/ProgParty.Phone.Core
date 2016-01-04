@@ -29,10 +29,13 @@ namespace ProgParty.Core
                                  NetworkConnectivityLevel.InternetAccess);
         }
 
-        internal async Task ShowNoConnectionMessage()
+        internal void ShowNoConnectionMessage()
         {
             if (!HasInternetAccess)
-                await new MessageDialog("Geen internet verbinding aanwezig :(").ShowAsync();
+            {
+                var dialog = new MessageDialog("Geen internet verbinding aanwezig :(");
+                dialog.ShowAsync();
+            }
 
         }
     }

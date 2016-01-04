@@ -10,7 +10,7 @@ namespace ProgParty.Core
             var config = Config.Instance;
 
             if(config.RegisterShowNoConnectionMessage)
-                await Connection.Instance.ShowNoConnectionMessage();
+                Connection.Instance.ShowNoConnectionMessage();
 
             if (config.RegisterReviewPopup)
                 await Review.Review.Instance.SetReviewPopup();

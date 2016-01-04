@@ -16,7 +16,7 @@ namespace ProgParty.Core.Image
         private StorageFile _imageFile = null;
         private bool _success = false;
 
-        public async void RegisterForShare(MenuFlyoutItem menuFlyoutItem, string url)
+        public void RegisterForShare(MenuFlyoutItem menuFlyoutItem, string url)
         {           
             //var saveImage = await new SaveImage().DoSaveImage(url);
             //_success = saveImage.Item1;

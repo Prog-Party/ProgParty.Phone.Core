@@ -1,18 +1,19 @@
-﻿using Windows.ApplicationModel.Store;
+﻿using System.Threading.Tasks;
+using Windows.ApplicationModel.Store;
 
 namespace ProgParty.Core
 {
     public class Register
     {
-        public static void Execute()
+        public static async Task Execute()
         {
             var config = Config.Instance;
 
             if(config.RegisterShowNoConnectionMessage)
-                Connection.Instance.ShowNoConnectionMessage();
+                await Connection.Instance.ShowNoConnectionMessage();
 
             if (config.RegisterReviewPopup)
-                Review.Review.Instance.SetReviewPopup();
+                await Review.Review.Instance.SetReviewPopup();
 
             if(config.RegisterPivotBackButton)
                 PivotBackButton.Instance.Register(config.Pivot, config.Page);

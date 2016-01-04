@@ -1,4 +1,5 @@
-﻿using Windows.Networking.Connectivity;
+﻿using System.Threading.Tasks;
+using Windows.Networking.Connectivity;
 using Windows.UI.Popups;
 
 namespace ProgParty.Core
@@ -28,10 +29,10 @@ namespace ProgParty.Core
                                  NetworkConnectivityLevel.InternetAccess);
         }
 
-        internal void ShowNoConnectionMessage()
+        internal async Task ShowNoConnectionMessage()
         {
             if (!HasInternetAccess)
-                new MessageDialog("Geen internet verbinding aanwezig :(").ShowAsync();
+                await new MessageDialog("Geen internet verbinding aanwezig :(").ShowAsync();
 
         }
     }

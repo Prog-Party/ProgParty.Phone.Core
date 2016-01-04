@@ -27,7 +27,7 @@ namespace ProgParty.Core.Review
             await Windows.System.Launcher.LaunchUriAsync(ReviewUri);
         }
 
-        public void SetReviewPopup()
+        public async Task SetReviewPopup()
         {
             var storage = new Storage.Storage();
 
@@ -57,7 +57,7 @@ namespace ProgParty.Core.Review
                 reviewPopup.CancelCommandIndex = 1;
 
                 // Show the message dialog
-                reviewPopup.ShowAsync();
+                await reviewPopup.ShowAsync();
             }
 
             storage.StoreInRoaming(StorageKeys.Review, reviewValue + 1);

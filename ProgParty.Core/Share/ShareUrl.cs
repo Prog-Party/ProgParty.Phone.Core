@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace ProgParty.Core.Share
 {
-    internal class ShareUrl
+    public class ShareUrl
     {
         protected Uri ApplicationLink => GetApplicationLink(GetType().Name);
 

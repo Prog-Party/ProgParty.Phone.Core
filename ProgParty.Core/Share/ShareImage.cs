@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace ProgParty.Core.Image
 {
-    internal class ShareImage
+    public class ShareImage
     {
         protected Uri ApplicationLink => GetApplicationLink(GetType().Name);
 

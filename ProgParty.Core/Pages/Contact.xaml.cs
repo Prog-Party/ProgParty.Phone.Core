@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -98,6 +100,23 @@ namespace ProgParty.Core.Pages
             //open the share contract with Mail only:
             await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(mail);
 #endif
+        }
+
+        private void SetCulture()
+        {
+            // set this thread's current culture to the culture associated with the selected locale
+
+            string cul = "nl-NL";
+
+            //CultureInfo newCulture = new CultureInfo(cul);
+
+            CultureInfo ci = new CultureInfo(Windows.System.UserProfile.GlobalizationPreferences.Languages[0]);
+
+            //Thread.CurrentThread.CurrentCulture = newCulture;
+
+            //CultureInfo cc, cuic;
+            //cc = Thread.CurrentThread.CurrentCulture;
+            //cuic = Thread.CurrentThread.CurrentUICulture;
         }
     }
 }

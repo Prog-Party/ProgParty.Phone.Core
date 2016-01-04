@@ -27,7 +27,7 @@ namespace ProgParty.Core
 
         public string AppName { get; set; }
 
-        internal void SetLicenseInformation(LicenseInformation licenseInformation)
+        public void SetLicenseInformation(LicenseInformation licenseInformation)
         {
             LicenseInformation = License.LicenseInfo.Instance.GetLicenseInformation(licenseInformation);
         }

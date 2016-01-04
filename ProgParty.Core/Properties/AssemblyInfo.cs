@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ProgParty.Core")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Library Core that is used as a base for ProgParty Windows Phone applications.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Prog Party!")]
 [assembly: AssemblyProduct("ProgParty.Core")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]

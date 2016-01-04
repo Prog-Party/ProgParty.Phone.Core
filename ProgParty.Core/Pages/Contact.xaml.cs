@@ -16,6 +16,15 @@ namespace ProgParty.Core.Pages
     /// </summary>
     public sealed partial class Contact : Page
     {
+        public Contact()
+        {
+            this.InitializeComponent();
+
+            SetFooterImage();
+
+            Track.Telemetry.Instance.PageVisit(this);
+        }
+
         public Contact(SolidColorBrush foregroundColor, SolidColorBrush backgroundColor, bool imageMirrored = false)
         {
             this.InitializeComponent();
@@ -33,14 +42,14 @@ namespace ProgParty.Core.Pages
             this.Foreground = foregroundColor;
         }
 
-        private void SetFooterImage(bool imageMirrored)
+        private void SetFooterImage(bool imageMirrored = false)
         {
             BitmapImage footerImage = new BitmapImage();
             
             if (imageMirrored)
-                footerImage.UriSource = new Uri("ms-appx:///Core/Assets/foto_jens_dennis.png");
-            else
                 footerImage.UriSource = new Uri("ms-appx:///Core/Assets/foto_jens_dennis_mirror.png");
+            else
+                footerImage.UriSource = new Uri("ms-appx:///Core/Assets/foto_jens_dennis.png");
 
             FooterImage.Source = footerImage;
         }
@@ -100,23 +109,6 @@ namespace ProgParty.Core.Pages
             //open the share contract with Mail only:
             await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(mail);
 #endif
-        }
-
-        private void SetCulture()
-        {
-            // set this thread's current culture to the culture associated with the selected locale
-
-            string cul = "nl-NL";
-
-            //CultureInfo newCulture = new CultureInfo(cul);
-
-            CultureInfo ci = new CultureInfo(Windows.System.UserProfile.GlobalizationPreferences.Languages[0]);
-
-            //Thread.CurrentThread.CurrentCulture = newCulture;
-
-            //CultureInfo cc, cuic;
-            //cc = Thread.CurrentThread.CurrentCulture;
-            //cuic = Thread.CurrentThread.CurrentUICulture;
         }
     }
 }

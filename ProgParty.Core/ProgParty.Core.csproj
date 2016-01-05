@@ -92,7 +92,9 @@
     <EmbeddedResource Include="Assets\icons\donation_w.png" />
     <EmbeddedResource Include="Assets\icons\girl.png" />
     <EmbeddedResource Include="Assets\icons\review.png" />
-    <EmbeddedResource Include="Assets\sale.png" />
+    <EmbeddedResource Include="Assets\sale.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="License\WindowsStoreProxy.xml" />
   </ItemGroup>
   <ItemGroup>

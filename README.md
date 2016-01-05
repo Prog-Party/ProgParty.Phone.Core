@@ -3,4 +3,4 @@ This **ProgParty.Phone.Core** project is used as a base for our Windows Phone 8.
 
 Windows nuget package build:
 
-[![ProgParty.Core Build Status](https://www.myget.org/BuildSource/Badge/progparty-phone-core?identifier=e7412c77-8b5a-47e0-a173-1ad3a49b1af8)]("")
+![ProgParty.Core Build Status](https://www.myget.org/BuildSource/Badge/progparty-phone-core?identifier=e7412c77-8b5a-47e0-a173-1ad3a49b1af8)

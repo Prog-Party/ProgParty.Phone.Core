@@ -80,19 +80,19 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Content Include="Assets\banner_Jens_Dennis.png" />
-    <Content Include="Assets\foto_jens_dennis.png" />
-    <Content Include="Assets\foto_jens_dennis_mirror.png" />
-    <Content Include="Assets\icons\18_b.png" />
-    <Content Include="Assets\icons\18_w.png" />
-    <Content Include="Assets\icons\advertisement.png" />
-    <Content Include="Assets\icons\doc_b.png" />
-    <Content Include="Assets\icons\doc_w.png" />
-    <Content Include="Assets\icons\donation_b.png" />
-    <Content Include="Assets\icons\donation_w.png" />
-    <Content Include="Assets\icons\girl.png" />
-    <Content Include="Assets\icons\review.png" />
-    <Content Include="Assets\sale.png" />
+    <EmbeddedResource Include="Assets\banner_Jens_Dennis.png" />
+    <EmbeddedResource Include="Assets\foto_jens_dennis.png" />
+    <EmbeddedResource Include="Assets\foto_jens_dennis_mirror.png" />
+    <EmbeddedResource Include="Assets\icons\18_b.png" />
+    <EmbeddedResource Include="Assets\icons\18_w.png" />
+    <EmbeddedResource Include="Assets\icons\advertisement.png" />
+    <EmbeddedResource Include="Assets\icons\doc_b.png" />
+    <EmbeddedResource Include="Assets\icons\doc_w.png" />
+    <EmbeddedResource Include="Assets\icons\donation_b.png" />
+    <EmbeddedResource Include="Assets\icons\donation_w.png" />
+    <EmbeddedResource Include="Assets\icons\girl.png" />
+    <EmbeddedResource Include="Assets\icons\review.png" />
+    <EmbeddedResource Include="Assets\sale.png" />
     <Content Include="License\WindowsStoreProxy.xml" />
   </ItemGroup>
   <ItemGroup>

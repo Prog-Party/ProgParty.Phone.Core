@@ -7,9 +7,9 @@ using Windows.UI.Notifications;
 
 namespace ProgParty.Core.Image
 {
-    internal class SaveImage
+    public class SaveImage
     {
-        internal async void RegisterForSave(string url)
+        public async void RegisterForSave(string url)
         {
             bool success = (await DoSaveImage(url)).Item1;
 

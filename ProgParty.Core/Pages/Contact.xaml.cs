@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -14,6 +16,15 @@ namespace ProgParty.Core.Pages
     /// </summary>
     public sealed partial class Contact : Page
     {
+        public Contact()
+        {
+            this.InitializeComponent();
+
+            SetFooterImage();
+
+            Track.Telemetry.Instance.PageVisit(this);
+        }
+
         public Contact(SolidColorBrush foregroundColor, SolidColorBrush backgroundColor, bool imageMirrored = false)
         {
             this.InitializeComponent();
@@ -31,14 +42,14 @@ namespace ProgParty.Core.Pages
             this.Foreground = foregroundColor;
         }
 
-        private void SetFooterImage(bool imageMirrored)
+        private void SetFooterImage(bool imageMirrored = false)
         {
             BitmapImage footerImage = new BitmapImage();
             
             if (imageMirrored)
-                footerImage.UriSource = new Uri("ms-appx:///Core/Assets/foto_jens_dennis.png");
-            else
                 footerImage.UriSource = new Uri("ms-appx:///Core/Assets/foto_jens_dennis_mirror.png");
+            else
+                footerImage.UriSource = new Uri("ms-appx:///Core/Assets/foto_jens_dennis.png");
 
             FooterImage.Source = footerImage;
         }

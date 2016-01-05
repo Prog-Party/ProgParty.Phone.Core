@@ -19,7 +19,7 @@ namespace ProgParty.Core
                 PivotBackButton.Instance.Register(config.Pivot, config.Page);
         }
 
-        internal static void RegisterOnLoaded()
+        public static void RegisterOnLoaded()
         {
             var config = Config.Instance;
 
@@ -27,7 +27,7 @@ namespace ProgParty.Core
                 Ads.Instance.RegisterAll();
         }
 
-        internal static void RegisterOnNavigatedTo(LicenseInformation licenseInformation)
+        public static void RegisterOnNavigatedTo(LicenseInformation licenseInformation)
         {
             Config.Instance.SetLicenseInformation(licenseInformation);
 

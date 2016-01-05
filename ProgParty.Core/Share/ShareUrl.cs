@@ -4,17 +4,17 @@ using Windows.UI.Xaml.Controls;
 
 namespace ProgParty.Core.Share
 {
-    internal class ShareUrl
+    public class ShareUrl
     {
-        protected Uri ApplicationLink => GetApplicationLink(GetType().Name);
+        protected string ApplicationLink => GetApplicationLink(GetType().Name);
 
-        public static Uri GetApplicationLink(string sharePageName) => new Uri("ms-sdk-sharesourcecs:navigate?page=" + sharePageName);
+        public static string GetApplicationLink(string sharePageName) => "ms-sdk-sharesourcecs:navigate?page=" + sharePageName;
 
-        private Uri _url = null;
+        private string _url = null;
         private string _description = null;
         private bool _success = false;
 
-        public void RegisterForShare(MenuFlyoutItem menuFlyoutItem, Uri url, string description = "")
+        public void RegisterForShare(MenuFlyoutItem menuFlyoutItem, string url, string description = "")
         {
             _url = url;
             _description = description;
@@ -33,7 +33,7 @@ namespace ProgParty.Core.Share
             request.Data.Properties.ApplicationName = Config.Instance.AppName;
             request.Data.Properties.Title = $"Share {Config.Instance.AppName} url";
             request.Data.Properties.Description = $"Share {Config.Instance.AppName} url";
-            request.Data.Properties.ContentSourceApplicationLink = ApplicationLink;
+            request.Data.Properties.ContentSourceApplicationLink = new Uri(ApplicationLink);
             request.Data.SetDataProvider(StandardDataFormats.WebLink, new DataProviderHandler(this.OnDeferredImageRequestedHandler));
 
             if (_success)
@@ -54,7 +54,7 @@ namespace ProgParty.Core.Share
                 // Make sure to always call Complete when finished with the deferral.
                 try
                 {
-                    request.SetData(_url.AbsolutePath);
+                    request.SetData(_url);
                 }
                 finally
                 {

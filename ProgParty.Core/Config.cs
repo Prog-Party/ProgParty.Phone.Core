@@ -26,11 +26,6 @@ namespace ProgParty.Core
         public LicenseInformation LicenseInformation { get; set; }
 
         public string AppName { get; set; }
-
-        public void SetLicenseInformation(LicenseInformation licenseInformation, bool isDebug)
-        {
-            LicenseInformation = License.LicenseInfo.Instance.GetLicenseInformation(licenseInformation, isDebug);
-        }
     }
 
     public class ConfigAd

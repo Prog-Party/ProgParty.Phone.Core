@@ -10,6 +10,8 @@ namespace ProgParty.Core.License
     {
         public static LicenseInfo Instance = new LicenseInfo();
 
+        public static Func<StorageFile> GetProxyFile = () => null;
+
         private bool ProxyFileIsLoaded = false;
 
         public LicenseInformation GetLicenseInformation(LicenseInformation license, bool isDebug)
@@ -29,9 +31,7 @@ namespace ProgParty.Core.License
 
             try
             {
-                StorageFolder coreFolder = await Package.Current.InstalledLocation.GetFolderAsync("Core");
-                StorageFolder licenseFolder = await coreFolder.GetFolderAsync("License");
-                StorageFile proxyFile = await licenseFolder.GetFileAsync("WindowsStoreProxy.xml");
+                StorageFile proxyFile = GetProxyFile();
                 await CurrentAppSimulator.ReloadSimulatorAsync(proxyFile);
                 ProxyFileIsLoaded = true;
             }

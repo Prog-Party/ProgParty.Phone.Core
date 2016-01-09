@@ -32,7 +32,7 @@ namespace ProgParty.Core.License
             try
             {
                 StorageFile proxyFile = await GetProxyFile();
-                await CurrentAppSimulator.ReloadSimulatorAsync(proxyFile);
+                
                 ProxyFileIsLoaded = true;
             }
             catch (Exception e)

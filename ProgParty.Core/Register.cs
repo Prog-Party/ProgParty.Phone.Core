@@ -27,9 +27,9 @@ namespace ProgParty.Core
                 Ads.Instance.RegisterAll();
         }
 
-        public static void RegisterOnNavigatedTo(LicenseInformation licenseInformation)
+        public static void RegisterOnNavigatedTo(LicenseInformation licenseInformation, bool isDebug)
         {
-            Config.Instance.SetLicenseInformation(licenseInformation);
+            Config.Instance.SetLicenseInformation(licenseInformation, isDebug);
 
             var config = Config.Instance;
 

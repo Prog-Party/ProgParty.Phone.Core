@@ -215,18 +215,24 @@ namespace ProgParty.Core
                 else if (!addControlLargeError)
                     AdControlLarge.Visibility = Visibility.Visible;
                 else
+                {
+                    ProgPartyBanner.Width = Window.Current.Bounds.Width;
                     ProgPartyBanner.Visibility = Visibility.Visible;
+                }
             }
             else
             {
                 if (!addControlLargeError)
-                    AdControlSmall.Visibility = Visibility.Visible;
+                    AdControlLarge.Visibility = Visibility.Visible;
                 else if (!addControlMediumError)
                     AdControlMedium.Visibility = Visibility.Visible;
                 else if (!addControlSmallError)
-                    AdControlLarge.Visibility = Visibility.Visible;
+                    AdControlSmall.Visibility = Visibility.Visible;
                 else
+                {
+                    ProgPartyBanner.Width = Window.Current.Bounds.Width;
                     ProgPartyBanner.Visibility = Visibility.Visible;
+                }
             }
         }
     }

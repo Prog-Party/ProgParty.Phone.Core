@@ -10,19 +10,16 @@ namespace ProgParty.Core.License
     {
         public static LicenseInfo Instance = new LicenseInfo();
 
-        public static LicenseInformation LicenseInformation;
-
         private bool ProxyFileIsLoaded = false;
 
-        public LicenseInformation GetLicenseInformation(LicenseInformation license)
+        public LicenseInformation GetLicenseInformation(LicenseInformation license, bool isDebug)
         {
-#if DEBUG
+            if (!isDebug)
+                return license;
+
             var licenseInfo = CurrentAppSimulator.LicenseInformation;
             Task.Run(() => LoadInAppPurchaseProxyFileAsync());
             return licenseInfo;
-#else
-            return license;
-#endif
         }
 
         private async Task LoadInAppPurchaseProxyFileAsync()

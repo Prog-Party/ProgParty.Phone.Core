@@ -10,7 +10,7 @@ namespace ProgParty.Core.License
     {
         public static LicenseInfo Instance = new LicenseInfo();
 
-        public static Func<StorageFile> GetProxyFile = () => null;
+        public static Func<Task<StorageFile>> GetProxyFile = () => null;
 
         private bool ProxyFileIsLoaded = false;
 
@@ -31,7 +31,7 @@ namespace ProgParty.Core.License
 
             try
             {
-                StorageFile proxyFile = GetProxyFile();
+                StorageFile proxyFile = await GetProxyFile();
                 await CurrentAppSimulator.ReloadSimulatorAsync(proxyFile);
                 ProxyFileIsLoaded = true;
             }

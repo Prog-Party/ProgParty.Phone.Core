@@ -20,7 +20,7 @@ namespace ProgParty.Core.Image
             }
         }
 
-        public async Task<Tuple<bool, StorageFile>> DoSaveImage(string imageUrl)
+        private async Task<Tuple<bool, StorageFile>> DoSaveImage(string imageUrl)
         {
             try
             {

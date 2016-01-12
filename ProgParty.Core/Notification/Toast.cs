@@ -4,13 +4,13 @@ using Windows.UI.Notifications;
 
 namespace ProgParty.Core.Notification
 {
-    internal class Toast
+    public class Toast
     {
         private ToastNotifier _toastNotifier { get; set; } = ToastNotificationManager.CreateToastNotifier();
 
-        internal static Toast Instance = new Toast();
+        public static Toast Instance = new Toast();
 
-        internal void Notify(string text, ToastTemplateType toastTemplateType, double duration, string imageUrl = null)
+        public void Notify(string text, ToastTemplateType toastTemplateType, double duration, string imageUrl = null)
         {
             XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplateType);
 

@@ -16,11 +16,11 @@ namespace ProgParty.Core.Image
         private StorageFile _imageFile = null;
         private bool _success = false;
 
-        public void RegisterForShare(MenuFlyoutItem menuFlyoutItem, string url)
-        {           
-            //var saveImage = await new SaveImage().DoSaveImage(url);
-            //_success = saveImage.Item1;
-            //_imageFile = saveImage.Item2;
+        public async void RegisterForShare(string url)
+        {
+            var saveImage = await new SaveImage().DoSaveImage(url);
+            _success = saveImage.Item1;
+            _imageFile = saveImage.Item2;
 
             DataTransferManager dataTransferManager = DataTransferManager.GetForCurrentView();
             dataTransferManager.DataRequested += ShareImageHandler;

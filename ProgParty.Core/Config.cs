@@ -7,10 +7,13 @@ namespace ProgParty.Core
     {
         public static Config Instance { get; set; }
 
-        public Config(Page page)
+        public Config(Page page, Language language = Language.Dutch)
         {
             Page = page;
+            this.language = language;
         }
+
+        public Language language { get; set; }
         
         public bool RegisterShowNoConnectionMessage { get; set; } = true;
         public bool RegisterReviewPopup { get; set; } = true;

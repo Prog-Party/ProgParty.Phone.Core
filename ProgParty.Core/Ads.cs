@@ -83,7 +83,9 @@ namespace ProgParty.Core
 
         private async void ProgPartyBanner_PointerReleased(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-            var appOverviewUri = new Uri("ms-windows-store://publisher/?name=Prog Party");
+            var appOverviewUri = new Uri("zune:search?publisher=Prog Party");                       //windows 8.x
+
+            //var appOverviewUri = new Uri("ms-windows-store://publisher/?name=Prog Party");        //windows 10 
 
             await Windows.System.Launcher.LaunchUriAsync(appOverviewUri);
         }

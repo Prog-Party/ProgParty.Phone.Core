@@ -91,6 +91,7 @@
     <Compile Include="Element\HtmlToRtf\XmlConvert.cs" />
     <Compile Include="Extension\StringExtension.cs" />
     <Compile Include="InAppPurchase.cs" />
+    <Compile Include="Language.cs" />
     <Compile Include="Notification\Toast.cs" />
     <Compile Include="PivotBackButton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Share\ShareImage.cs" />
     <Compile Include="Share\ShareUrl.cs" />
     <Compile Include="Storage\Storage.cs" />
+    <Compile Include="Store\Routing.cs" />
     <Compile Include="Track\Telemetry.cs" />
   </ItemGroup>
   <ItemGroup>
